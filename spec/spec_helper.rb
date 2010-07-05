@@ -1,8 +1,11 @@
 require 'spec'
 require 'rubygems'
 
-require File.dirname(__FILE__) + '/../lib/dragonfly'
-$:.unshift(File.dirname(__FILE__))
+$:.unshift('lib') unless $:.include?('lib')
+require 'dragonfly'
+
+$:.unshift('.')
+
 require 'argument_matchers'
 require 'simple_matchers'
 require 'image_matchers'

@@ -1,8 +1,8 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
+$LOAD_PATH.unshift(File.expand_path('../../../lib', __FILE__))
 require 'dragonfly'
 require 'spec/expectations'
 require 'test/unit/assertions'
-require File.dirname(__FILE__) + '/../../spec/image_matchers.rb'
+require File.expand_path('../../../spec/image_matchers.rb', __FILE__)
 
 # A hack as system calls weren't using my path
 extra_paths = %w(/opt/local/bin)
